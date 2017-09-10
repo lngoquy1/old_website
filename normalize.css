@@ -1,0 +1,394 @@
+/*------------------------------------------------------ 
+ General layout
+ -----------------------------------------------------*/
+
+header {
+    text-align: left;
+    color: white;
+    position: relative;
+    min-height: 100px;
+    max-width: 100%;
+    top: 10px;
+    left: 0px;
+    color: rgb(0,0,50);
+    overflow-y: scroll;
+
+  
+   
+}
+
+body {
+    position: relative;
+    background-image: url(lan-background.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    transition: margin-left .5s;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Alice', serif;
+}
+
+footer {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+article {
+    max-width: 700px;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: 10%;
+    margin-bottom: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 500;
+}
+/*------------------------------------------------------
+ Side Navigation Push
+ -----------------------------------------------------*/
+#navbutton {
+    font-size:30px;
+    cursor:pointer;
+    position: fixed;
+    top: 60px;
+    
+}
+#navbutton:hover {
+    opacity: 0.5;
+    
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 50);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    /*not so relative design*/
+}
+
+#main {
+    transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+/*------------------------------------------------------ 
+ Arranging the content
+ -------------------------------------------------------*/
+
+#about {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgb(255, 255, 255);
+}
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 15px;
+    font-size: 20px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '>';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 35px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+#projects {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(0, 0, 0);
+}
+
+footer {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+ul {
+    padding: 10px;
+    background: black;
+}
+
+li {
+    display: inline;
+    padding: 0px 20px 0px 20px;
+}
+
+#lines {
+    background-color: rgba(255, 255, 0, 0.4);
+}
+
+#contact {
+    background-color: rgba(0, 0, 80, 0.6);
+    color: rgb(255, 255, 255);
+}
+
+input {
+    border: 0;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+
+/*-------------------------------------------------------
+ Making the content of #projects invisible until clicked 
+ --------------------------------------------------------*/
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {
+    opacity: 0.7;
+}
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+}
+/* Modal Content (image) */
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+/* Caption of Modal Image */
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+/* Add Animation */
+
+.modal-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+/* The Close Button */
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+/* Modal Content */
+
+.modal-content {
+    color: rgb(255, 255, 255);
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+}
+
+.close:hover;
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 100% Image Width on Smaller Screens */
+
+@media only screen and (max-width: 600px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/*---------------------------------------------------
+ Contact form
+  --------------------------------------------------*/
+form {
+    width: 500px;
+    margin: 0 auto;
+}
+label {
+    display: block;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+input, textarea {
+    width: 480px;
+    height: 30px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #dedede;
+    padding: 10px;
+    margin-top: 3px;
+    font-size: 0.9em;
+    color: rgb(0,0,0);
+}
+input:focus, textarea:focus {
+		border: 2px solid #97d6eb;
+	         }
+textarea {
+	height:213px;
+}
+#submit {
+    background: rgb(108,0,0);
+    width: 127px;
+    height: 40px;
+    text-indent: -9999px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    color: rgb(255,255,255);
+}
+#submit:hover {
+    opacity: 0.8;
+}
+
+    
+
+
+/*---------------------------------------------------
+ Mobile interface
+ ---------------------------------------------------*/
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 36px;
+    }
+    li {
+        display: block;
+        padding: 5px;
+    }
+}
+
+h2 {
+    font-family: 'Satisfy', cursive;
+}

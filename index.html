@@ -1,0 +1,84 @@
+<!-- This is how you write a comment -->
+<!DOCTYPE html>
+
+<head>
+  
+    <title>Lan Ngo</title> 
+    <link rel="icon" href="icon.jpg">
+    <link href="normalize.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Alice' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <span id="navbutton" onclick="openNav()">
+                <img src="sidenav.png" width="50px" height="auto">
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;Lan Anh Ngo Quy
+        </h1>
+        <div id="sideNavigation" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+            <a href="#about">About</a>
+            <a href="#projects">Work</a>
+            <a href="#projects">Stuff</a>
+            <a href="#contact">Contact</a>
+            <a href="https://www.facebook.com/la.kuteo">f</a>
+            <a href="https://www.linkedin.com/in/lan-anh-ngo-quy-13870379">in</a>
+        </div>
+    </header>
+    
+    <div id="main">
+        <article id="about">
+            <h2>About me</h2>
+            <p>Hi! I'm Lan. I enjoy travelling across timezones and am intrigued lots about the relativity of time and space and the position of myself in it. Currently pursueing a major in CS and minors in Stats and Bio, I hope to continue on Computational Biology for higher education. This summer, besides work as a business dev intern, I spend time picking up more technical skills, learning piano and French, perusing a Stat book, and of course, waiting for Septa train with a kindle.</p>
+            <button class="button" style="vertical-align:middle" onclick="javascript:document.location='https://drive.google.com/file/d/0B_Rcu1Dch6Jrc25oR3RWcFByZ28/view?usp=sharing'">
+                <span>Check out my resume!</span>
+            </button>
+        </article>
+        <article id="projects">
+            <h2>My Projects</h2>
+            <!-- Trigger the Modal -->
+            <img id="myImg" src="sample.png" alt="Model Cochlea" width="300" height="200">
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <span class="close">x</span>
+                <div class="modal-content">
+                    <img id="img01">
+                    <div id="caption"></div>
+                    <p>For a final project of Linear Physical System Analysis (ENGR12), me and my lab partner (Matthew Olivencia) created a model of the inner ear coclear's reception of different sound frequencies using state space, coded in Matlab and modeled again with Simulink.</p>
+                </div>
+            </div>
+            
+        </article>
+        <article id="lines">
+            <h2>Best Lines</h2>
+            <p>Long or short is not the question, what matters is the distance you go
+            </p>
+        </article>
+        <article id="contact">
+            <h2>Contact me</h2>
+            <p>Break this coolness, nonchalant!</p>
+            
+            <form method="post" action="index.php">
+              <label>Name</label>
+              <input name="name" placeholder="What's your name?">
+              <label>Email</label>
+              <input name="email" type="email" placeholder="Your email, please">
+              <label>Message</label>
+              <textarea name="message" placeholder="Send me a note"></textarea>
+              <label>*What is 2+2? (Are you a robot or something?)</label>
+              <input name="human" placeholder="Type here">
+              <input id="submit" name="submit" type="submit" placeholder="Submit">
+            </form>
+                
+        </article>
+        <footer>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
