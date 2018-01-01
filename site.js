@@ -2,6 +2,11 @@
 // $('.navbutton').on('click', function() {
 // 	$('.content').toggleClass('isOpen');
 // });
+$(document).ready(function(){
+    $("#shelved").click(function(){
+        $("#shelvedModal").modal();
+    });
+});
 
 $('.cta a').click(function() {
 	$('html,body').animate({
