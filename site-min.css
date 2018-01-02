@@ -50,45 +50,11 @@ a {
   max-width: 1170px;
 }
 
-.toggle {
-  position: fixed;
-  top: 20px;
-  right: 0;
-  bottom: 0;
-  left: 20px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  z-index: 1;
-  font-size: 30px;
-  color: black;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
-.toggle:hover { color: #29D4E8; }
-
-#sidebartoggler { display: none; }
-
-#sidebartoggler:checked + .wrapper .sidebar { left: 0px; }
-
-#sidebartoggler:checked + .wrapper .toggle { left: 200px; }
-
-#sidebartoggler:checked + .wrapper .content { padding-left: 200px; }
-.sidebar {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  position: absolute;
-  width: 220px;
-}
-
 
 .content {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  /*-webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;*/
+  transition: margin-left 0.5s;
   flex: 1;
   flex-direction: column; 
   flex-wrap:  wrap; 
@@ -104,11 +70,15 @@ a {
 }
 .navbutton {
   cursor: pointer;
+  position:  fixed; 
+  z-index:  1;
 }
 .navbutton:before {
   content: '\f0c9';
   font: 42px fontawesome;
 }
+
+.navbuton:hover { color: #29D4E8; } 
 
 
 .title {
@@ -122,6 +92,16 @@ a {
   background: #2a2a2a;
 }
 
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
 .sidebar li a {
   position: relative;
   display: block;
@@ -144,6 +124,14 @@ a {
   -webkit-transition: all 0.5s ease-in;
   -moz-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
 
@@ -188,6 +176,12 @@ a {
 .sidebar li a.active {
   box-shadow: inset 5px 0 0 #5b5, inset 6px 0 0 #222;
   background: #444;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
 
 .button {
@@ -318,7 +312,10 @@ a {
   -webkit-transition: background 0.4s;
   -moz-transition: background 0.4s;
   transition: background 0.4s;
-  object-fit: 100%;
+}
+#tours ul li a {
+  font-size:  30px;
+  color: #FFF;
 }
 #tours ul li:hover {
   background: rgba(0, 0, 0, 0);

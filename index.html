@@ -3,18 +3,23 @@
 <head>
   <title>Lan Anh Ngô Quý </title>
   <link rel='stylesheet', href="site-min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="site.js" type="text/javascript" ></script>
-  <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  
+  <!-- <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script> -->
+
 </head>
 <body>
  <!--  Wrapper -->
-    <input type="checkbox" id="sidebartoggler">
-    <label class="toggle" for="sidebartoggler">☰</label>
+    <!-- <input type="checkbox" id="sidebartoggler">
+    <label class="toggle" for="sidebartoggler">☰</label> -->
+
+   
     <div class="wrapper">
+      <!--  Sidebar -->
       <div class='sidebar'>
           <div class='title'>Lan Ngo</div>
+          <a href="javascript:void(0)" class="closebtn">&times;</a>
           <ul>
             <li>
               <svg width="250" height="125">
@@ -52,10 +57,12 @@
         </div> 
    
 
-      <!--  Sidebar -->
       
       <!--   Content -->
       <div class='content'>
+        <!-- Navigation button  -->
+        <a class='navbutton'></a>
+        
         <div id='intro'>
           <div class='cta container'>
             <h1>Xin chào! It's Lan </h1>
@@ -74,7 +81,9 @@
         <ul>
           <li>
             <div id="shelved">
-              <h3>Shelved</h3>
+              <a href="https://github.com/lngoquy1/Shelfie">
+                <h3>Shelved</h3>
+              </a>
               <h4>Java/Volley/Spark REST API/MySQL</h4>
             </div>
             <img alt='Shelved, Android application' src='shelved.png'>
@@ -82,15 +91,18 @@
           </li>
           <li>
             <div id="cnn">
+              <a href="https://github.com/lngoquy1/Cervical-Scan-CNN">
               <h3>Cervical Cancer Screening</h3>
+              </a>
               <h4>Python/OpenCV/keras/scikit-learn</h4>
             </div>
-            <!-- Image By chensiyuan (chensiyuan) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 4.0-3.0-2.5-2.0-1.0 (http://creativecommons.org/licenses/by-sa/4.0-3.0-2.5-2.0-1.0)], via Wikimedia Commons, https://upload.wikimedia.org/wikipedia/commons/7/70/Yosemite_national_park_mirror_lake_2010u.JPG -->
             <img alt='CNN cervical scan' src='cnn.png'>
           </li>
           <li>
             <div id="crossword">
-              <h3>NYTimes Topstories crossword</h3>
+              <a href="https://github.com/lngoquy1/NYTimes-TopStories-crossword">
+                <h3>NYTimes Topstories crossword</h3>
+              </a>
               <h4>Python/React.js/Node.js/NLTK</h4>
             </div>
             <!-- Image By Moyan Brenn [CC-BY-2.0 (http://creativecommons.org/licenses/by/2.0)], via Flickr, https://www.flickr.com/photos/aigle_dore/5951674773 -->
@@ -98,7 +110,9 @@
           </li>
           <li>
             <div>
-              <h3>Microarray extraction pipeline</h3>
+              <a href="https://github.com/lngoquy1/Data-Wrangling">
+                <h3>Microarray extraction pipeline</h3>
+              </a>
               <h4>R</h4>
             </div>
             <!-- Image By Ricymar Photography [CC-BY-2.0 (http://creativecommons.org/licenses/by/2.0)], via Flickr, https://www.flickr.com/photos/ricardo_mangual/5749480168 -->
@@ -151,8 +165,7 @@
     
   </div> 
     
-  
-  
+  <script src="site.js"></script>
 </body>
 </html>
 
