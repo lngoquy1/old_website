@@ -1,0 +1,206 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.93]{geometry} % Reduce document margins
+\setlength{\hintscolumnwidth}{3.6cm} % Uncomment to change the width of the dates column
+\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Lan Anh} % Your first name
+\familyname{NGO QUY} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+%\title{Curriculum Vitae}
+%\address{500 College Ave.}{Swarthmore, PA 19081}
+\mobile{(+1) 610 999 2596}
+\email{lngoquy1@swarthmore.edu}
+\homepage{https://github.com/lngoquy1}{github.com/lngoquy1} % The first argument is %the url for the clickable link, the second argument is the url displayed in the %template - this allows special characters to be displayed such as the tilde in this %example
+\extrainfo{cs.swarthmore.edu/\textasciitilde lngoquy1}
+%\photo[70pt][0.4pt]{picture} % The first bracket is the picture height, the second is %the thickness of the frame around the picture (0pt for no frame)
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\cventry{Aug 2015--May 2019}{Swarthmore College - Computer Science and Mathematics}{}{GPA 3.44}{}{
+\begin{itemize}
+\item Computer Science: \textit{Operating Systems, Software Engineering, Programming Languages, Algorithms, Computer Vision, Bioinformatics, Data Structures}
+\item Mathematics: \textit{Differential Equations, Probability, Mathematical Statistics, Statistical Methods, Honors Multivariable Calculus, Honors Linear Algebra}
+\end{itemize}
+} 
+  % Arguments not required can be left empty
+\cvitem{Honors and Awards}{Richard L. Rubin Scholars, Swarthmore Summer Entrepreneurship Fellowship, NSF Summer Research Grant, CRA-W Grace Hopper Research Scholar, Rewriting the Code Scholar }
+
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+\cventry{Jun 2018--Aug 2018}{Search Relevance, Salesforce}{}{}{}{
+\textit{Incoming Software Engineering Intern}
+}
+
+\cventry{Sep 2017--Current}{Swarthmore College, Mathematics \& Statistics Department}{}{}{}{
+\textit{Undergraduate Research Assistant}
+\begin{itemize}
+\item Analyzed structure in relationship of data and performance of model-assisted survey regression estimators with adaptive LASSO to predict transition in Land Use/Land Cover
+\item Built a Shiny App to conduct variable cross-walk among different datasets 
+\end{itemize}}
+
+\cventry{May 2017--Aug 2017}{University of Pennsylvania, Himeslab}{}{}{}{
+\textit{Undergraduate Research Assistant in Biomedical Informatics}
+\begin{itemize}
+\item Built pipeline to collect relevant GEO datasets and conducted meta-analysis  
+\item Extracted transcriptomic signatures of sepsis severity with model selection methods: lima package, LASSO, adaptive LASSO, LDA, sparse LDA, random forests
+\end{itemize}
+}
+
+\cventry{May 2017--Aug 2017}{Swarthmore College, Mathematics \& Statistics Department}{}{}{}{
+\textit{Undergraduate Research Assistant in Paleontology Statistics}
+\begin{itemize}
+\item Developed statistical methods to account for dating uncertainty in paleontology 
+\item Parallelized R code to run on 60 lab machines
+\item Presented poster at Joint Statistical Meetings 2017 in Baltimore\end{itemize}}
+
+%----------------------------------------------------------------------------------------
+%	PROJECT SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Projects}
+\cventry{Sept 2017--Current}{Virtual Bookshelves Android App, Shelved}{}{}{}{
+\textit{Java/Hibernate/Volley/Spark REST API/MySQL}
+\begin{itemize}
+\item Built model's API, created Android and Hibernate classes for MySQL database
+\item Implemented end-to-end functions to handle requests with Volley and Spark REST API 
+\item Integrated zxing, OCR APIs to add books from ISBNs and pictures of book spines
+\end{itemize}}
+
+\cventry{Oct 2017}{HackNY, Newsawareness Crossword Webapp}{}{}{}{
+\textit{Python/Node.js/React.js/NLTK}
+\begin{itemize}
+\item Implemented NLTK, NYTimes TopStories API to extract pairs of questions and hints 
+\item Implemented crossword generator algorithm to build webapp in 2 days of hackathon
+\end{itemize}}
+
+\cventry{Mar 2017--May 2017}{Convolutional Neural Networks, Cervical Cancer Screening}{}{}{}{
+\textit{Python/scikit-learn/keras/OpenCV/Numpy}
+\begin{itemize}
+\item Segmented region-of-interest with maximum histogram algorithm, Gaussian Mixture Models, thresholding and morphological operations
+\item Experimented with tuning hyperparameters with Convolutional Neural Networks, Multi-layer Perceptron and Bag of (Visual) Words models for predicting cervical types
+\end{itemize}}
+
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Technical skills}
+
+\cvitem{Languages}{
+\setlength{\tabcolsep}{15pt}
+\begin{tabular}{llllll}
+Python & Java & C/C++ & R & MATLAB & OCaml 
+\end{tabular}
+}
+\cvitem{Environment/Libraries}{
+\setlength{\tabcolsep}{15pt}
+\begin{tabular}{llll}
+Numpy & scikit-learn & Hibernate & Spark REST API  \\
+OpenCV & Git & Linux & High-Performance Computing Clusters  \\
+Maven/Gradle & MySQL & Node.js & React.js\\
+\end{tabular}
+}
+
+% %----------------------------------------------------------------------------------------
+% %	LANGUAGES SECTION
+% %----------------------------------------------------------------------------------------
+
+% \section{Languages}
+% \begin{small}
+% \cvitemwithcomment{Arabic}{Native Speaker}{}
+% \cvitemwithcomment{French}{Near Native}{excellent command}
+% \cvitemwithcomment{English}{Near Native}{excellent command}
+% \cvitemwithcomment{Chinese}{Intermediate}{good working knowledge}
+% \cvitemwithcomment{Japanese}{Intermediate}{good working knowledge}
+% \end{small}
+
+
+% %----------------------------------------------------------------------------------------
+% %	INTERESTS SECTION
+% %----------------------------------------------------------------------------------------
+% %\bigskip
+
+% \section{Interests}
+
+% \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+% \cvlistdoubleitem{Trecking}{Robotics (NAO Junior Developer)}
+% %\cvlistdoubleitem{Robotics}{}
+
+
+% %----------------------------------------------------------------------------------------
+% %	COVER LETTER
+% %----------------------------------------------------------------------------------------
+
+% % To remove the cover letter, comment out this entire block
+
+% %\clearpage
+
+% %\recipient{HR Departmnet}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+% %\date{\today} % Letter date
+% %\opening{Dear Sir or Madam,} % Opening greeting
+% %\closing{Sincerely yours,} % Closing phrase
+% %\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+
+% %\makelettertitle % Print letter title
+
+% %\lipsum[1-3] % Dummy text
+
+% %\makeletterclosing % Print letter signature
+
+% %----------------------------------------------------------------------------------------
+
+\end{document}
